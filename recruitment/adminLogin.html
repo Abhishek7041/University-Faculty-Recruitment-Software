@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Faculty Recruitment Form | GGSIPU NEWDELHI</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" author="MightyMoin" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="icon" href="../images/final_logo.svg.png">
+    <noscript>
+        <link rel="stylesheet" href="../css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- hamburger- for mobile view -->
+        <span class="menu_btn" onclick="openNav()">&#9776;</span>
+        <!-- 	Header	-->
+        <header id="header">
+            <span class="logo"><a href="http://www.ipu.ac.in/" target="###"><img
+                        src="../images/final_logo_web_extended_lq.svg.png" alt="" /></a></span>
+            <h1>Faculty Recruitment Form</h1>
+            <p>
+                Admin | Faculty Recruitment Portal <a href="http://www.ipu.ac.in/" target="###">GGSIPU NEWDELHI</a>.<br />
+            </p>
+        </header>
+        <div id="main">
+
+            <!-- Content -->
+            <section id="content" class="main" style="padding-top: 0;">
+
+                <!--	Congratulatory Message	-->
+                <div class="spotlight">
+                    <div class="content">
+                        <form action='.' , method="POST" style="margin-top: 5em;">
+                            
+                            <div class="col-12" style="padding: 20px;">
+                                <img height="100px" src="../images/adminUser.svg" alt="admin logo">
+                            </div>
+                            <div style="text-align: left;">
+                                Incorrect attempts:&nbsp;&nbsp;
+                                <span>
+                                    <input id="chances" name="chances" type="number" value="{{ abc }}"
+                                        style="width: 5em; display:none;" hidden readonly>
+                                    <!--  data is going to the backend-->
+                                    <input id="front" type="number" value="" style="width: 5em; display:inline-block"
+                                        readonly> <!--  for front end only -->
+                                </span>
+                            </div>
+                            <div class="text-box">
+                                <h2 style="font-weight: 900;">Admin Login</h2>
+                                <input type="text" placeholder="Username" name="Username" class="textbox"></input>
+                                <br>
+                                <input type="password" id="pass" placeholder="Password" name="Password"
+                                    class="textbox"></input>
+                                <br>
+                            </div>
+                            <button id="submitform" class="button small primary" type="submit">Login</button>
+                            <script>
+                                var input = document.getElementById("pass");
+                                input.addEventListener("keyup", function (event) {
+                                    if (event.keyCode === 13) {
+                                        event.preventDefault();
+                                        document.getElementById("submitform").click();
+                                    }
+                                });
+                            </script>
+                        </form>
+                        
+                        <p class="error">Either username or password is incorrect</p>
+                        <script>
+                            var tries = document.querySelector('#chances').value
+                            tries = `${parseInt(tries) + 1}`
+                            console.log(tries);
+                        </script>
+                        
+
+                        
+                        <p class="error" style="font-weight: 500;color:crimson"> Incorrect 3 times! </p>
+                        
+                    </div>
+                </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <h2>How to Reach Us</h2>
+                <p style="font-size: smaller;">The GGSIP UNIVERSITY campus is located at Golf course road, sector 16c Dwarka, NewDelhi-110078.</p>
+                <ul class="actions">
+                    <li><a href="https://www.google.com/maps/place/Guru+Gobind+Singh+Indraprastha+University/@28.5949786,77.0171102,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1aafdb891567:0x10d270731c930a87!8m2!3d28.5949739!4d77.0192989" target="#3" class="button small"><i
+                                class="fas fa-map-marked-alt"></i><span> View Map </span></a></a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Contact Details</h2>
+                <dl class="alt" style="font-size: smaller;">
+                    <dt>Address</dt>
+                    <dd>GGSIPU NEWDELHI &bull; Golf course road &bull; Sector 16c Dwarka &bull; NewDelhi – 110078 &bull;
+                        India
+                    </dd>
+                    <dt>Email</dt>
+                    <dd><a
+                            href="mailto:contact@ipu.ac.in?subject=Faculty%20Recruitment%20Query">contact@ipu.ac.in</a>
+                    </dd>
+                </dl>
+                <ul class="icons" style="font-size: small;">
+                    <li><a href="https://www.google.com/maps/place/Guru+Gobind+Singh+Indraprastha+University/@28.5949786,77.0171102,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1aafdb891567:0x10d270731c930a87!8m2!3d28.5949739!4d77.0192989" target="#4"
+                            class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://twitter.com/GGSIPUindia" target="#5" class="icon brands fa-twitter alt"><span
+                                class="label">Twitter</span></a></li>
+                    <li><a href="https://www.facebook.com/GGSIPUofficial" target="#6"
+                            class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+                    <!--	<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>	-->
+                </ul>
+            </section>
+           
+            <p class="copyright">© Copyright 2021 - <a href="http://www.ipu.ac.in/" target="blank"
+                    style="font-weight:500;"></a>, <a href="http://www.ipu.ac.in/"
+                    target="blank" style="font-weight:500;">GGSIPU NEWDELHI</a> All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.scrollex.min.js"></script>
+    <script src="../js/jquery.scrolly.min.js"></script>
+    <script src="../js/browser.min.js"></script>
+    <script src="../js/breakpoints.min.js"></script>
+    <script src="../js/util.js"></script>
+    <script src="../js/main.js"></script>
+
+
+    <script>
+        Date.prototype.toDateInputValue = (function () {
+            var local = new Date(this);
+            local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+            return local.toJSON().slice(0, 10);
+        });
+
+        $(document).ready(function () {
+            $('#signDate').val(new Date().toDateInputValue());
+        });
+    </script>
+
+    <script>
+        $.notify("Either Username or Password is incorrect", "error");
+    </script>
+    {% if abc == 0 %}
+    <script>
+        var tries = document.querySelector('#chances').value;
+        tries = `${parseInt(tries) + 1}`;
+        $('#chances').val(tries);
+        console.log(tries);
+    </script>
+    {% endif %}
+    <script>
+        $('#front').val(parseInt($('#chances').val()) - 1);
+    </script>
+
+</body>
+
+</html>
